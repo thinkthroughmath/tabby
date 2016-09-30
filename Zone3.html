@@ -13,7 +13,7 @@
 
 <!--gives title the id agenda. The id will check the javascript for the title-->
 <title id="agenda">Original</title>
-<h2>Zone 2 Tabby>
+<h2>Zone 3 Tabby</h2>
  <h3>DESCRIPTION:</h3>
  <h3 id="text">Original</h3>
  <h3> All information is located in the title bar above. </h3> <p><h3> <a href="
@@ -32,7 +32,7 @@ for (i = 1; i <= 1e6; i++)
     //Defines entries as feed.entry which is an array of the content of the spreadsheet. So entries= all of the stuff you see in a spreadsheet. 
     var entries = feed.entry;
     //Defines entry as a single item within the giant list of entries. Essentially each cell=an entry Example, first time it goes through it will be entry=entries item 1 in array
-    var entry = entries[1]
+    var entry = entries[2]
     //Variable title = contents of the actual cell. So it takes each cell, (entry) pulls the title element and within that element is the $t which is the actual text context of the cell
 	var title = entry.title.$t     
 	var desc = entry.gsx$tabbyinfo.$t
@@ -64,8 +64,8 @@ for (i = 1; i <= 1e6; i++)
         //this defines the script type as javascript
         script.type = "text/javascript";
         //this tells the script source which is the google spreadsheet
-        script.src = "https://spreadsheets.google.com/feeds/list/1fP1SGFSq_sT8BdYHj3HEkr5ctPdPFWXPPVRahkq9kW4/2/public/values?alt=json-in-script&callback=listevents";
-        //appends script to head, which places the spreadsheet within the head tags0
+        script.src ="https://spreadsheets.google.com/feeds/list/1fP1SGFSq_sT8BdYHj3HEkr5ctPdPFWXPPVRahkq9kW4/2/public/values?alt=json-in-script&callback=listevents";
+         //appends script to head, which places the spreadsheet within the head tags
         head.appendChild(script);
 
 		console.timeEnd("concatenation");
